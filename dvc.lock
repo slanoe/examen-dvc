@@ -10,12 +10,12 @@ stages:
       nfiles: 2
     - path: src/data/data_split.py
       hash: md5
-      md5: 32c56eba104a982393e1e182ef31f657
-      size: 2662
+      md5: 85ef2cac6d0eb9ad4355f79ecefeb8f7
+      size: 2841
       isexec: true
     outs:
     - path: data/processed
       hash: md5
-      md5: f0cdce1cc4c5efb86aa24f946011d155.dir
-      size: 330849
+      md5: ea5e20a3ece6ba76477bdc8f954ad90b.dir
+      size: 294499
       nfiles: 4

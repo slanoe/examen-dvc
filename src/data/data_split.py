@@ -23,6 +23,9 @@ def process_data(input_filepath_minerals, output_filepath):
     # Import datasets
     df = import_dataset(input_filepath_minerals, sep=",", header=0, encoding='utf-8')
 
+    # Drop columns
+    df = drop_columns(df)
+
     # Split data into training and testing sets
     X_train, X_test, y_train, y_test = split_data(df)
 
@@ -34,6 +37,12 @@ def process_data(input_filepath_minerals, output_filepath):
 
 def import_dataset(file_path, **kwargs):
     return pd.read_csv(file_path, **kwargs)
+
+def drop_columns(df):
+    # Drop columns
+    list_to_drop = ['date' ]
+    df.drop(list_to_drop, axis=1, inplace=True)
+    return df
 
 def split_data(df):
     # Split data into training and testing sets
