@@ -14,8 +14,52 @@ stages:
       size: 2841
       isexec: true
     outs:
-    - path: data/processed
+    - path: data/processed/X_test.csv
       hash: md5
-      md5: ea5e20a3ece6ba76477bdc8f954ad90b.dir
-      size: 294499
-      nfiles: 4
+      md5: d3be1be617366bc81a9254f075039b51
+      size: 78770
+      isexec: true
+    - path: data/processed/X_train.csv
+      hash: md5
+      md5: 38e9f56c92d20ee33257e3918c901e7e
+      size: 183322
+      isexec: true
+    - path: data/processed/y_test.csv
+      hash: md5
+      md5: e064ea83fe860a49b9e9cfab1e8ec5a7
+      size: 9697
+      isexec: true
+    - path: data/processed/y_train.csv
+      hash: md5
+      md5: 4f1097f0b9053f0a94904c047541877f
+      size: 22710
+      isexec: true
+  normalize:
+    cmd: python src/data/normalize.py
+    deps:
+    - path: data/processed/X_test.csv
+      hash: md5
+      md5: d3be1be617366bc81a9254f075039b51
+      size: 78770
+      isexec: true
+    - path: data/processed/X_train.csv
+      hash: md5
+      md5: 38e9f56c92d20ee33257e3918c901e7e
+      size: 183322
+      isexec: true
+    - path: src/data/normalize.py
+      hash: md5
+      md5: f35c01596551a00546d10d6f12076b92
+      size: 2555
+      isexec: true
+    outs:
+    - path: data/processed/X_test_scaled.csv
+      hash: md5
+      md5: 81c1d315fc460509015feb7ac245c5d0
+      size: 83647
+      isexec: true
+    - path: data/processed/X_train_scaled.csv
+      hash: md5
+      md5: 04e06272a934f0445c948b94b3651d15
+      size: 194244
+      isexec: true
