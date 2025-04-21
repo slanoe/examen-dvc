@@ -1,0 +1,21 @@
+schema: '2.0'
+stages:
+  split:
+    cmd: python src/data/data_split.py
+    deps:
+    - path: data/raw
+      hash: md5
+      md5: 83524b9ab09f4ac15af2c899d45e60eb.dir
+      size: 333773
+      nfiles: 2
+    - path: src/data/data_split.py
+      hash: md5
+      md5: 32c56eba104a982393e1e182ef31f657
+      size: 2662
+      isexec: true
+    outs:
+    - path: data/processed
+      hash: md5
+      md5: f0cdce1cc4c5efb86aa24f946011d155.dir
+      size: 330849
+      nfiles: 4
