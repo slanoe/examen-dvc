@@ -87,3 +87,32 @@ stages:
       md5: e9df175062b5e7376ccb71fdd73a68d2
       size: 91
       isexec: true
+  training:
+    cmd: python src/models/training.py
+    deps:
+    - path: data/processed/X_train_scaled.csv
+      hash: md5
+      md5: 04e06272a934f0445c948b94b3651d15
+      size: 194244
+      isexec: true
+    - path: data/processed/y_train.csv
+      hash: md5
+      md5: 4f1097f0b9053f0a94904c047541877f
+      size: 22710
+      isexec: true
+    - path: models/best_params.pkl
+      hash: md5
+      md5: e9df175062b5e7376ccb71fdd73a68d2
+      size: 91
+      isexec: true
+    - path: src/models/training.py
+      hash: md5
+      md5: 9b69d2c2d2b34ea3d3be0e599e8a7897
+      size: 2275
+      isexec: true
+    outs:
+    - path: models/gbr_model.pkl
+      hash: md5
+      md5: 26230e404e26f4d041817081a0d0ada3
+      size: 7118843
+      isexec: true
