@@ -116,3 +116,37 @@ stages:
       md5: 26230e404e26f4d041817081a0d0ada3
       size: 7118843
       isexec: true
+  evaluate:
+    cmd: python src/models/evaluate.py
+    deps:
+    - path: data/processed/X_test_scaled.csv
+      hash: md5
+      md5: 81c1d315fc460509015feb7ac245c5d0
+      size: 83647
+      isexec: true
+    - path: data/processed/y_test.csv
+      hash: md5
+      md5: e064ea83fe860a49b9e9cfab1e8ec5a7
+      size: 9697
+      isexec: true
+    - path: models/gbr_model.pkl
+      hash: md5
+      md5: 26230e404e26f4d041817081a0d0ada3
+      size: 7118843
+      isexec: true
+    - path: src/models/evaluate.py
+      hash: md5
+      md5: 829f9604393c135278b92dd9bbb313cf
+      size: 2816
+      isexec: true
+    outs:
+    - path: data/processed/prediction.csv
+      hash: md5
+      md5: 3ef9290ea2fee1dc5fdfa3f8d5e75aeb
+      size: 10160
+      isexec: true
+    - path: metrics/scores.json
+      hash: md5
+      md5: c7d09986f7bcf5ea1508c2cc2ee409b7
+      size: 101
+      isexec: true
